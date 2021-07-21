@@ -1,19 +1,23 @@
-function add(n1, n2, print, phrase) {
-    var result = n1 + n2;
-    if (print) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 2] = "Admin";
+    Role[Role["Author"] = 3] = "Author";
+    Role[Role["Client"] = 4] = "Client";
+})(Role || (Role = {}));
+; // creo un oggetto con gli elementi già numerati , è possibile anche assegnari i numeri manualmente e gli altri seguiranno il numero precedente
+var person = {
+    name: 'Matthew',
+    age: 29,
+    hobbies: ['Sport', 'Dance'],
+    role: [2, 'footballer'],
+    worker: Role.Admin
+};
+var favHobbies = ['Pallavolo', 1]; // determino un array variabile
+console.log(person);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
 }
-var number1 = 5;
-var number2 = 2.5;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-add(number1, number2, printResult, resultPhrase);
-// è possibile assegnare tipizzazioni alle variabili in modo da esser certi che il valore non possa esser diverso dalla tipizzazione: 
-// let number1: number;
-//  number = '5'; darà errore perchè ho dichiarato la tipizzazione della variabile, la tipizzazione viene anche dichiarata implicitamente con const string1 = 'ciao';
-//core types: 
-// number : compresi numeri decimali etc     string  : stringhe di testo     boolean: true or false / 0 or 1
+if (person.worker == Role.Admin) {
+    console.log('is Admin');
+}
