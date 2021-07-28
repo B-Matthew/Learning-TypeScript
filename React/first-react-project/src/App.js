@@ -1,4 +1,5 @@
-import Todo from './components/Todo';     // importo il componente 
+import Todo from './components/Todo'; // importo il componente
+
 
 function App() {
   return (
@@ -8,8 +9,10 @@ function App() {
           posso utilizzare il mio componente a mio piacimento per aggiungere quanti blocchi html voglia*/}
       <Todo text='First'/> 
       <Todo text='Second'/>
+      <Todo text='Third' />
    </div>
   );
 }
 
 export default App;
+      
